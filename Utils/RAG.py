@@ -1,5 +1,5 @@
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_groq import ChatGroq
 from langgraph.prebuilt import create_react_agent
@@ -17,7 +17,7 @@ class RAGSystem:
         self.vector_store = None
         self.agent_executor = None
         # Initialize Groq model for chat
-        self.llm = ChatGroq(temperature=0.7, model="openai/gpt-oss-120b")
+        self.llm = ChatGroq(temperature=0.7, model="openai/gpt-oss-safeguard-20b")
         self.web_search_tool = DuckDuckGoSearchRun()
 
     def ingest(self, text):

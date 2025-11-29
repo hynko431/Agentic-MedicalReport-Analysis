@@ -43,7 +43,7 @@ def process_medical_report(medical_report):
 
 if __name__ == "__main__":
     # read the medical report
-    with open("Medical Reports\Medical Report - Michael Johnson - Panic Attack Disorder.txt", "r") as file:
+    with open(r"Medical Reports\Medical Report - Michael Johnson - Panic Attack Disorder.txt", "r") as file:
         medical_report = file.read()
         
     final_diagnosis = process_medical_report(medical_report)

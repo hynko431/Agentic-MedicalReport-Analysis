@@ -11,7 +11,7 @@ class Agent:
         self.prompt_template = self.create_prompt_template()
         # Initialize the model
         #self.model = ChatOpenAI(temperature=0, model="gpt-5")
-        self.model = ChatGroq(temperature=0, model="/gpt-oss-safeguard-20b")
+        self.model = ChatGroq(temperature=0.7, model="openai/gpt-oss-safeguard-20b")
 
     def create_prompt_template(self):
         if self.role == "MultidisciplinaryTeam":
